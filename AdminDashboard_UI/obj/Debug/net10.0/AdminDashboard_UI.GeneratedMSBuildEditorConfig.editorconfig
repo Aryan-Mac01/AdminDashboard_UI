@@ -38,8 +38,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aryanmishra/OneDrive - Nagarro/Desktop/AdminDashboard/AdminDashboard_UI/Views/Registration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uLmNzaHRtbA==
+[C:/Users/aryanmishra/OneDrive - Nagarro/Desktop/AdminDashboard/AdminDashboard_UI/Views/Home/PasswordIncorrect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXNzd29yZEluY29ycmVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aryanmishra/OneDrive - Nagarro/Desktop/AdminDashboard/AdminDashboard_UI/Views/Home/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aryanmishra/OneDrive - Nagarro/Desktop/AdminDashboard/AdminDashboard_UI/Views/Shared/_ValidationScriptsPartial.cshtml]
