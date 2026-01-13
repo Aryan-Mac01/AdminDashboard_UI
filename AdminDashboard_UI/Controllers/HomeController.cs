@@ -33,6 +33,12 @@ namespace AdminDashboard_UI.Controllers
         {
             return View();
         }
+
+        public IActionResult ExistingUser()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult RegisterUser(string username, string email, string password, string confirmPassword)
         {
@@ -40,6 +46,13 @@ namespace AdminDashboard_UI.Controllers
             {
                 ViewBag.ErrorMessage = "Passwords do not match";
                 return View("PasswordIncorrect");
+            }
+
+            var ExistingUser = _context.Users.FirstOrDefault(u => u.Name == username || u.Email == email);
+
+            if (ExistingUser != null)
+            {
+                return View("ExistingUser");
             }
 
             _context.Users.Add(new Users
