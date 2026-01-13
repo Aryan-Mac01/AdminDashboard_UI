@@ -54,6 +54,28 @@ namespace AdminDashboard_UI.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public IActionResult UserNotFound()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Name == username);
+
+            if (user == null)
+            {
+                return View("UserNotFound");
+            }
+
+            if (user.Password != password)
+            {
+                return View("PasswordIncorrect");
+            }
+            return View("Dashboard");
+        }
        
         
     }
