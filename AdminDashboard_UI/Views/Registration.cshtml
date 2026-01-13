@@ -1,0 +1,25 @@
+﻿@{
+    TempData["Title"] = "User Registration";
+}
+
+<div>
+    <form asp-asp-controller="Home" asp-action="RegisterUser" method="post">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Please enter your username" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Please enter your email address"/>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Please enter the password" />
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="Please confirm your password!"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>

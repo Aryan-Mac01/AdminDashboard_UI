@@ -14,5 +14,7 @@ namespace AdminDashboard_UI.Models
         [MaxLength(40)]
         public string Role { get; set; }
 
+        public string password { get; set; }
+
     }
 }
