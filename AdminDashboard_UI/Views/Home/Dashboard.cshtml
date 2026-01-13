@@ -1,1 +1,51 @@
-﻿Dashboard
+﻿@model List<AdminDashboard_UI.Models.Products> // IEnumerable<AdminDashboard_UI.Models.Products> -> List of the products that we want, a kind of loop
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dashboard</h1>
+</div>
+
+<div>
+    <h2>Product List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                if(Model==null || !Model.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center">No Products Available</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Color</td>
+                </tr>
+            }
+                }
+
+            }
+
+            
+        </tbody>
+    </table>
+</div>
