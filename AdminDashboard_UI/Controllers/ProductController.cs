@@ -32,6 +32,14 @@ namespace AdminDashboard_UI.Controllers
             _context.SaveChanges();
             return RedirectToAction("Dashboard", "Home");
         }
+
+        public IActionResult DeleteProduct(int productid)
+        {
+            var product = _context.Products.FirstOrDefault(p => p.ProductId == productid);
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard", "Home");
+        }
     }
 
 

@@ -81,14 +81,14 @@ namespace AdminDashboard_UI.Controllers
 
             if (user == null)
             {
-                return View("UserNotFound");
+                return RedirectToAction("UserNotFound");
             }
 
             if (user.Password != password)
             {
-                return View("PasswordIncorrect");
+                return RedirectToAction("PasswordIncorrect");
             }
-            return View("Dashboard");
+            return RedirectToAction("Dashboard");
         }
        
         
